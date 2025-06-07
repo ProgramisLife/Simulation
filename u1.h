@@ -9,23 +9,13 @@ class U1 : public User {
 public:
     U1(int userId) : User(userId) {}
 
-    void activate() override {
-        isActive = true;
-    }
+    void activate(double currentTime) override;
 
-    void deactivate() override {
-        isActive = false;
-    }
+    void deactivate() override;
 
-    std::vector<int> getOccupiedChannels() const override {
-        std::vector<int> channels;
-        if (isActive) {
-            for (int i = 0; i < RHO_CHANNELS; ++i) {
-                channels.push_back(i);  // Zajmuje kanały 0 do ρ-1
-            }
-        }
-        return channels;
-    }
+    std::vector<int> getOccupiedChannels() const override;
+
+    U1() = default;
 };
 
 #endif // U1_H

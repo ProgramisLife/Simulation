@@ -130,9 +130,13 @@
     <ClCompile Include="ChannelManager.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="u1.cpp" />
+    <ClCompile Include="u2.cpp" />
+    <ClCompile Include="Simulator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="constants.h" />
+    <ClInclude Include="Simulator.h" />
     <ClInclude Include="u1.h" />
     <ClInclude Include="u2.h" />
     <ClInclude Include="user.h" />

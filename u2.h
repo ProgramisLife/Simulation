@@ -14,45 +14,22 @@ private:
 public:
     U2(int userId) : User(userId), channelId(-1), accessAttempts(0) {}
 
-    void activate() override {
-        isActive = true;
-        accessAttempts = 0;
-        // Losowe przypisanie kana³u (implementacja w .cpp)
-    }
+    void activate(double currentTime) override;
 
-    void deactivate() override {
-        isActive = false;
-        channelId = -1;
-    }
+    void deactivate() override;
 
-    std::vector<int> getOccupiedChannels() const override {
-        std::vector<int> channels;
-        if (isActive && channelId != -1) {
-            channels.push_back(channelId);
-        }
-        return channels;
-    }
+    std::vector<int> getOccupiedChannels() const override;
 
     // Dodatkowe metody specyficzne dla U2
-    bool assignChannel(int channel) {
-        if (!isActive || channel < 0 || channel >= TOTAL_CHANNELS) {
-            return false;
-        }
-        channelId = channel;
-        return true;
-    }
+    bool assignChannel(int channel);
 
-    void incrementAccessAttempts() {
-        accessAttempts++;
-    }
+    void incrementAccessAttempts();
 
-    bool hasExceededAccessAttempts() const {
-        return accessAttempts >= MAX_ACCESS_ATTEMPTS;
-    }
+    bool hasExceededAccessAttempts() const;
 
-    int getAssignedChannel() const {
-        return channelId;
-    }
+    int getAssignedChannel() const;
+
+    U2() = default;
 };
 
 #endif // U2_H
