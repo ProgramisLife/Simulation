@@ -127,19 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ChannelManager.cpp" />
-    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="channel_manager.cpp" />
+    <ClCompile Include="fifo_queue.cpp" />
+    <ClCompile Include="random_generator.cpp" />
     <ClCompile Include="Simulation.cpp" />
     <ClCompile Include="u1.cpp" />
     <ClCompile Include="u2.cpp" />
-    <ClCompile Include="Simulator.cpp" />
+    <ClCompile Include="simulator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="channel_manager.h" />
     <ClInclude Include="constants.h" />
-    <ClInclude Include="Simulator.h" />
+    <ClInclude Include="event.h" />
+    <ClInclude Include="fifo_queue.h" />
+    <ClInclude Include="random_generator.h" />
+    <ClInclude Include="simulator.h" />
     <ClInclude Include="u1.h" />
     <ClInclude Include="u2.h" />
     <ClInclude Include="user.h" />
+    <ClInclude Include="variables.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

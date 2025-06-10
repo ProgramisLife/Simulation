@@ -14,4 +14,13 @@ constexpr int FIFO_QUEUE_SIZE = 5;       // ν rozmiar bufora
 // Ograniczenia prób dostępu
 constexpr int MAX_ACCESS_ATTEMPTS = 3;    // α maksymalne próby
 
+constexpr int DEFAULT_SEED = 2;
+
+const double XI_DURATION_MS = 200.0;
+
+enum class ScenarioType {
+    A0, // Scenariusz Referencyjny
+    A1  // Scenariusz z dynamicznym dostępem
+};
+
 #endif // CONSTANTS_H

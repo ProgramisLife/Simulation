@@ -29,7 +29,10 @@ public:
 
     int getAssignedChannel() const;
 
+    int getAccessAttempts() const;
+
     U2() = default;
+
 };
 
 #endif // U2_H

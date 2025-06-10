@@ -1,16 +1,11 @@
 
 #include "u2.h"
 #include"constants.h"
-
-
-
-
-
+#include <iostream>
 
    void U2::activate(double currentTime) {
         this->isActive = true;
         this->accessAttempts = 0;
-        // Losowe przypisanie kana³u (implementacja w .cpp)
     }
 
     void U2::deactivate(){
@@ -26,9 +21,10 @@
         return channels;
     }
 
-    // Dodatkowe metody specyficzne dla U2
-   bool U2::assignChannel(int channel) {
-        if (!this->isActive || channel < 0 || channel >= TOTAL_CHANNELS) {
+    bool U2::assignChannel(int channel) {
+        if (channel < 0 || channel >= TOTAL_CHANNELS) {
+            std::cerr << "Ostrze¿enie: Próba przypisania nieprawid³owego ID kana³u ("
+                << channel << ") do U2#" << getId() << ".\n";
             return false;
         }
         this->channelId = channel;
@@ -47,5 +43,7 @@
         return this->channelId;
     }
 
-    
+    int U2::getAccessAttempts() const {
+        return this->accessAttempts;
+    }
 

@@ -1,8 +1,6 @@
 ﻿#include "u1.h"
 #include"constants.h"
 
-
-
    void U1::activate(double currentTime){
         this->isActive = true;
         this->activationTime = currentTime;
