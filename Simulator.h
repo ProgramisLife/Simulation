@@ -2,6 +2,7 @@
 #ifndef SIMULATOR_H
 #define SIMULATOR_H
 
+#include "constants.h"
 #include <memory>
 #include <vector>
 #include <queue>
@@ -9,7 +10,6 @@
 #include "channel_manager.h"
 #include "u1.h"
 #include "u2.h"
-#include "constants.h"
 #include "event.h"
 #include "random_generator.h"
 

@@ -4,6 +4,7 @@
 
 #include <cstdint>
 #include <cmath>
+#include "constants.h"
 
 class RandomGenerator {
 private:

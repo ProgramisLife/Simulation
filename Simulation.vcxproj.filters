@@ -53,9 +53,6 @@
     <ClInclude Include="simulator.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="variables.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
     <ClInclude Include="random_generator.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>

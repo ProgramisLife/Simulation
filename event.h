@@ -1,5 +1,6 @@
 // event.h
 #pragma once
+#include "constants.h"
 #include <memory> // Dla std::shared_ptr
 #include "u1.h"   // Zak³adam, ¿e masz klasê U1
 #include "u2.h"

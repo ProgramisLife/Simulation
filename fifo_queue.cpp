@@ -1,4 +1,5 @@
 #include "fifo_queue.h"
+#include "constants.h"
 
 FifoQueue::FifoQueue(int size) : max_size(size) {}
 

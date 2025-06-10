@@ -1,4 +1,5 @@
 // channel_manager.cpp
+#include "constants.h"
 #include "channel_manager.h"
 #include <iostream> // Dla std::cerr, do logowania ostrze¿eñ/b³êdów
 

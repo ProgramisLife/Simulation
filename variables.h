@@ -1,4 +1,4 @@
-#pragma once
+pragma once
 #ifndef VARIABLES_H
 #define VARIABLES_H
 

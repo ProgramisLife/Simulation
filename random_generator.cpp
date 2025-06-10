@@ -1,6 +1,7 @@
 #include "random_generator.h"
 #include <stdexcept>
 #include <limits>
+#include "constants.h"
 
 RandomGenerator::RandomGenerator(uint32_t initial_seed)
     : seed(initial_seed) {

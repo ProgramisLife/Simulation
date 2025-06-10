@@ -3,16 +3,10 @@
 #ifndef CHANNEL_MANAGER_H
 #define CHANNEL_MANAGER_H
 
+#include "constants.h"// Potrzebne dla TOTAL_CHANNELS, RHO_CHANNELS
 #include <vector>
 #include <memory> // Dla std::shared_ptr
-#include "constants.h" // Potrzebne dla TOTAL_CHANNELS, RHO_CHANNELS
 #include "u2.h"        // Potrzebne, bo bêdziemy przechowywaæ shared_ptr<U2>
-
-// Definicja typów scenariuszy (jeœli nie masz jej ju¿ w Simulator.h)
-enum class ScenarioType {
-    A0, // Scenariusz Referencyjny
-    A1  // Dynamiczny Dostêp do Widma dla U2
-};
 
 // Nowy enum dla statusu kana³u
 enum class ChannelState {
@@ -23,10 +17,8 @@ enum class ChannelState {
 
 class ChannelManager {
 private:
-    // <<< TE DWIE LINIE S¥ KLUCZOWE I MUSZ¥ BYÆ W TYM PLIKU >>>
     std::vector<ChannelState> channelStates;        // Status ka¿dego kana³u (wolny, zajêty przez U1, zajêty przez U2)
     std::vector<std::shared_ptr<U2>> channelOccupantsU2; // Przechowuje wskaŸnik do U2, jeœli kana³ jest zajêty przez U2
-    // <<< KONIEC KLUCZOWYCH LINII >>>
 
 public:
     ChannelManager();
